@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools" android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:background="@drawable/cart_background"
+>
+    <ImageView
+            android:layout_width="100dp"
+            android:layout_margin="4dp"
+            android:layout_height="100dp" android:id="@+id/imgEach" app:srcCompat="@drawable/pizza1"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="Title"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#373b54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTitle"
+            app:layout_constraintStart_toEndOf="@+id/imgEach" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="$0"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#373b54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewTotalEach"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+            app:layout_constraintEnd_toEndOf="@+id/textViewFeeEach"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout2"/>
+    <TextView
+            android:text="$0"
+            android:layout_marginStart="220dp"
+            android:textSize="18sp"
+            android:textStyle="normal"
+            android:textColor="#373b54"
+            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewFeeEach"
+            app:layout_constraintStart_toEndOf="@+id/imgEach" app:layout_constraintTop_toTopOf="@+id/textViewTitle"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewTitle" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.549" app:layout_constraintVertical_bias="0.0"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+            app:layout_constraintStart_toEndOf="@+id/imgEach" android:background="@drawable/yellow_bar"
+            android:id="@+id/constraintLayout2">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_height="wrap_content" android:id="@+id/plusCart" app:srcCompat="@drawable/plus"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/constraintLayout"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"/>
+        <ImageView
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/minusCart" app:srcCompat="@drawable/minus"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" android:id="@+id/constraintLayout">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/imageView9"
+                    app:srcCompat="@drawable/white_circle" app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                    android:text="1"
+                    android:textColor="#373b54"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/numberItemTxt"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+                    app:layout_constraintTop_toTopOf="@+id/imageView9"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                    app:layout_constraintStart_toStartOf="@+id/imageView9"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
